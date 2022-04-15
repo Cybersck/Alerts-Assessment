@@ -1,3 +1,19 @@
+#
+# I have chosen to use the Model View Controller design pattern as I feel it best compliments reacts unidirectional data flow.
+#
+# The logical flow of the application is as follows:
+# Components call on controllers -> controllers process data, dispatch actions, and call on services -> services contain API calls.
+# Generally controllers will have functions corresponding to all applicable crud operations, make the call to a service inside of a promise, wait for a response
+# and then dispatch to update state or handle errors. 
+# (If requested I would be happy to add simulated api calls to demonstrate my knowledge of promises and async/await but for the sake of time contraints I'm submitting without for now)
+# The 'Helpers' folder would normally contain other business logic or global functions that aren't component specific and do not directly affect state (not applicable to this project)
+#
+
+# This project has also been modified to use react-app-rewired for absolute paths (for cleaner, standardized imports)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -9,7 +25,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost](http://localhost) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
